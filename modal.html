@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <title>Modal</title>
+
+</head>
+<body class="modalBody">
+    <button id="readMoreReviewModalBtn" onclick="openSuccessReviewModal()" class="readMoreReviewModalBtn">Click Here</button>
+
+    <section id="successReviewModal" class="reviewModal">
+        <article class="successReviewModalContent">
+            <span 
+                id="closeBtn"
+                onclick="closeSuccessReviewModal()" 
+                class="closeBtn"
+                style="position: relative; float: right; height: 0;"
+            >&times;</span>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+
+                <img src="./assets/images/check.png" alt="success check" style="width: 150px; height: 150px;">
+
+                <h2>Thanks</h2>
+                <p>Your Review has been submitted!</p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- <section id="writeNewReviewModal" class="reviewModal">
+        <article class="writeNewReviewModalContent">
+            <div class="reviewModalContentTitleContainer">
+                <div>
+                    <span id="closeBtn" onclick="closeWriteNewReviewModal()" class="closeBtn">&times;</span>
+                </div>
+                <h1>Write a Review</h1>
+                <div>
+                    <span class="writeNewReviewSendBTN" onclick="onSubmitNewReview()">Send</span>
+                </div>
+            </div>
+
+
+            <main style="background-color: #fff; padding: 16px; border-radius: 5px;">
+                <div class="reviewSwiperHead">
+                    <div style="text-align: center; width: 100%; border-bottom: 1px solid #ccc;">
+                        <div class="reviewRatingIconContainer">
+                            <span class="star" data-value="1">&#9734;</span>
+                            <span class="star" data-value="2">&#9734;</span>
+                            <span class="star" data-value="3">&#9734;</span>
+                            <span class="star" data-value="4">&#9734;</span>
+                            <span class="star" data-value="5">&#9734;</span>
+                        </div>
+                        <div>
+                            Tap a Star to Rate
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#" method="post" style="width: 100%;">
+
+                    <input 
+                        type="text"
+                        name="reviewTitle"
+                        id="reviewInputTitle"
+                        placeholder="Title"
+                        class="reviewTitleInput"
+                    />
+
+                    <textarea 
+                        name="reviewMessage" 
+                        id="reviewInputMessage" 
+                        class="reviewMessageInput"
+                        placeholder="Review (Optional)"
+                        rows="1"
+                        oninput="autoGrowTextarea(this)"
+                    ></textarea>
+
+                </form>
+            </main>
+        </article>
+
+    </section> -->
+
+    <!-- <section id="readMoreReviewModal" class="reviewModal">
+        <article class="reviewModalContent reviewDetails">
+            <div class="reviewModalContentTitleContainer">
+                <h1>Rating & Reviews</h1>
+                <div>
+                    <span id="closeBtn" class="closeBtn">&times;</span>
+                </div>
+            </div>
+
+
+            <main style="background-color: #fff; padding: 16px; border-radius: 5px;">
+                <div class="reviewSwiperHead">
+                    <div>
+                        <div class="reviewTitleContainer">
+                            Status and Channel
+                        </div>
+                        <div class="reviewRatingIconContainer">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="reviewTimeAgo">30 Sept.</div>
+                        <div class="reviewUserName">John Smith</div>
+                    </div>
+                </div>
+
+                <article class="reviewContent">
+                    <p style="padding-top: 10px; padding-bottom: 10px;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quos unde maiores, deserunt odio repudiandae alias asperiores quas deleniti voluptates tenetur iure veritatis assumenda eum? Eos officia laboriosam soluta rem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id ut ex tempora. Quaerat placeat quo magnam sapiente? Quae, earum unde! Necessitatibus eligendi minima sequi odit voluptatum atque!
+                    </p>
+                </article>
+            </main>
+        </article>
+
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiperJs.js"></script>
+</body>
+</html>

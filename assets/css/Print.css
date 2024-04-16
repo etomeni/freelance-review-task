@@ -1,0 +1,1 @@
+@media print{header,nav,div.sidebar,div#join-community-container,footer{display:none}div{float:none;overflow:visible;display:inline}div.small-12.medium-8.columns{float:none!important;overflow:visible!important;display:inline!important;width:80%!important}}
